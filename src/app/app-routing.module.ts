@@ -44,8 +44,8 @@ const routes: Routes = [
     component: LifecycleComponent
   },
   {
-    path: '',
-    component: OutputComponent
+    path: '**',
+    redirectTo: 'ngif'
   }
 ];
 
