@@ -1,1 +1,25 @@
-<p>rxjs works!</p>
+<div class="container">
+  <div class="obs1">
+    <span>Observable 1:</span>
+    <div [class.active]="!!obs1"></div>
+    <span>{{ obs1 }}</span>
+  </div>
+  <div class="obs2">
+    <span>Observable 2:</span>
+    <div [class.active]="!!obs2"></div>
+    <span>{{ obs2 }}</span>
+  </div>
+  <div class="obs3">
+    <span>Observable 3:</span>
+    <div [class.active]="!!obs3"></div>
+    <span>{{ obs3 }}</span>
+  </div>
+  <div class="merge">
+    <span>Merge:</span>
+    <span *ngFor="let log of merge">{{ log }}</span>
+  </div>
+  <div class="forkjoin">
+    <span>ForkJoin:</span>
+    <span *ngFor="let log of forkJoin">{{ log }}</span>
+  </div>
+</div>

@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class OutputComponent {
 
-  constructor() { }
+  arr: string[] = [];
 
   logChildValue(data: string) {
-    console.log(data);
+    this.arr.push(data);
   }
 
 }

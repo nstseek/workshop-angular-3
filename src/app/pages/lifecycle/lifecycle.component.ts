@@ -2,9 +2,9 @@ import {
   Component,
   OnInit,
   AfterViewInit,
-  OnChanges,
   OnDestroy,
-  DoCheck
+  DoCheck,
+  ChangeDetectorRef
 } from '@angular/core';
 
 @Component({
@@ -15,23 +15,33 @@ import {
 export class LifecycleComponent
   implements OnInit, AfterViewInit, OnDestroy, DoCheck {
   state = false;
+  logs: string[] = [];
 
-  constructor() {}
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    console.log('O componente está sendo inicializado');
+    const msg = 'O componente está sendo inicializado';
+    console.log(msg);
+    this.logs.push(msg);
   }
 
   ngOnDestroy() {
-    console.log('O componente será destruído');
+    const msg = 'O componente será destruído';
+    console.log(msg);
+    this.logs.push(msg);
   }
 
   ngDoCheck() {
-    console.log('Uma mudança no estado do componente ocorreu');
+    const msg = 'Uma mudança no estado do componente ocorreu';
+    console.log(msg);
+    this.logs.push(msg);
   }
 
   ngAfterViewInit() {
-    console.log('O componente foi totalmente inicializado');
+    const msg = 'O componente foi totalmente inicializado';
+    console.log(msg);
+    this.logs.push(msg);
+    // this.cdr.detectChanges(); // necessario para que o angular veja que o estado mudou no AfterViewInit - experimente remover essa linha
   }
 
   changeState() {
