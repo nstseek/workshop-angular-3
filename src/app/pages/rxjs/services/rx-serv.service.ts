@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, pipe } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import { del } from 'selenium-webdriver/http';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class RxServService {
   }
 
   send1(delayVal: number) {
-    pipe(delay());
+    pipe(delay(delayVal));
   }
 
   get2() {

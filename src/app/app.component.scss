@@ -1,0 +1,18 @@
+div.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    background-image: linear-gradient(45deg, rgb(71, 118, 230), rgb(142, 84, 233));
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    transition: all .1s;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    &:hover {
+      border: 1px solid white;
+      box-shadow: 1px 1px 10px 1px rgba(255, 255, 255, 0.5);
+    }
+  }
+}

@@ -11,7 +11,6 @@ export class RxjsComponent implements OnInit {
   constructor(private service: RxServService) { }
 
   ngOnInit() {
-    
   }
 
 }
