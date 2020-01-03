@@ -7,14 +7,10 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./outcomp.component.scss']
 })
 export class OutcompComponent {
-
   @Output() emitter = new EventEmitter();
   campo = new FormControl(null);
-
-  constructor() { }
 
   emit() {
     this.emitter.emit(this.campo.value);
   }
-
 }

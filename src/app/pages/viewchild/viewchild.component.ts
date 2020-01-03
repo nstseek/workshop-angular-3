@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { ChildcompComponent } from 'src/app/components/childcomp/childcomp.component';
 
 @Component({
@@ -6,12 +6,8 @@ import { ChildcompComponent } from 'src/app/components/childcomp/childcomp.compo
   templateUrl: './viewchild.component.html',
   styleUrls: ['./viewchild.component.scss']
 })
-export class ViewchildComponent implements OnInit, AfterViewInit {
+export class ViewchildComponent implements AfterViewInit {
   @ViewChild('child', { static: false }) component: ChildcompComponent;
-
-  constructor() {}
-
-  ngOnInit() {}
 
   ngAfterViewInit() {
     console.log(this.component.propriedade);

@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./childcomp.component.scss']
 })
 export class ChildcompComponent {
-
   propriedade = 'Esse componente possui uma propriedade interna de sua classe';
-
-  constructor() { }
-
 }

@@ -6,10 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./inpcomp.component.scss']
 })
 export class InpcompComponent {
-
   @Input() frase: string;
-
-  constructor() { }
-
-
 }

@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
 export class NgforComponent {
   arr: number[] = [];
 
-  constructor() {}
-
   pushNumber(value: number) {
     if (value) {
       this.arr.push(value);

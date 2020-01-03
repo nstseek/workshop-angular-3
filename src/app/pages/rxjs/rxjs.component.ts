@@ -15,17 +15,27 @@ export class RxjsComponent implements OnInit {
   obs3: string = null;
   merge: string[] = [];
   forkJoin: string[] = [];
+  subject: string[] = [];
 
   constructor(private service: RxServService) {}
+
+  get emit() {
+    return this.service.emit;
+  }
+
+  get complete() {
+    return this.service.complete;
+  }
 
   ngOnInit() {
     this.service.observable1.subscribe(this.saveNext('obs1'));
     this.service.observable2.subscribe(this.saveNext('obs2'));
     this.service.observable3.subscribe(this.saveNext('obs3'));
-    forkJoin(this.service.observable1, this.service.observable2, this.service.observable3).subscribe(
+    this.service.subject.subscribe(this.saveNext('subject', true));
+    forkJoin(this.service.observable1, this.service.observable2, this.service.observable3, this.service.subject).subscribe(
       this.saveNext('forkJoin', true)
     );
-    merge(this.service.observable1, this.service.observable2, this.service.observable3).subscribe(
+    merge(this.service.observable1, this.service.observable2, this.service.observable3, this.service.subject).subscribe(
       this.saveNext('merge', true)
     );
   }
@@ -33,5 +43,5 @@ export class RxjsComponent implements OnInit {
   saveNext = (key: string, arr = false) => (data: number | number[]) => {
     const str = `${data} | ${Date.now() - now}ms`;
     arr ? this[key].push(str) : (this[key] = str);
-  };
+  }
 }

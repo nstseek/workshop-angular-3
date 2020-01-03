@@ -7,9 +7,5 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./ngif.component.scss']
 })
 export class NgifComponent {
-
   checkbox = new FormControl(false);
-
-  constructor() { }
-
 }

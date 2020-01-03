@@ -6,11 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./output.component.scss']
 })
 export class OutputComponent {
-
   arr: string[] = [];
 
   logChildValue(data: string) {
     this.arr.push(data);
   }
-
 }
