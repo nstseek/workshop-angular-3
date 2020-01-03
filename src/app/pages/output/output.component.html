@@ -1,2 +1,4 @@
-<app-outcomp (emitter)="logChildValue($event)"></app-outcomp>
-<span *ngFor="let log of arr">{{ log }}</span>
+<div class="container">
+  <app-outcomp (emitter)="logChildValue($event)"></app-outcomp>
+  <span *ngFor="let log of arr">{{ log }}</span>
+</div>

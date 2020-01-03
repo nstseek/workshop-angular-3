@@ -1,11 +1,11 @@
 <div class="container">
-  <a [routerLink]="'/ngif'">ngIf</a>
-  <a [routerLink]="'/ngfor'">ngFor</a>
-  <a [routerLink]="'/lifecycle'">Lifecycle</a>
-  <a [routerLink]="'/rxjs'">RxJS</a>
-  <a [routerLink]="'/viewchild'">ViewChild</a>
-  <a [routerLink]="'/output'">Output</a>
-  <a [routerLink]="'/input'">Input</a>
-  <a [routerLink]="'/form'">TypedForm</a>
+  <a [class.selected]="'/ngif' === url" [routerLink]="'/ngif'">ngIf</a>
+  <a [class.selected]="'/ngfor' === url" [routerLink]="'/ngfor'">ngFor</a>
+  <a [class.selected]="'/lifecycle' === url" [routerLink]="'/lifecycle'">Lifecycle</a>
+  <a [class.selected]="'/rxjs' === url" [routerLink]="'/rxjs'">RxJS</a>
+  <a [class.selected]="'/viewchild' === url" [routerLink]="'/viewchild'">ViewChild</a>
+  <a [class.selected]="'/output' === url" [routerLink]="'/output'">Output</a>
+  <a [class.selected]="'/input' === url" [routerLink]="'/input'">Input</a>
+  <a [class.selected]="'/form' === url" [routerLink]="'/form'">TypedForm</a>
 </div>
 <router-outlet></router-outlet>

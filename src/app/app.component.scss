@@ -13,6 +13,10 @@ div.container {
     &:hover {
       border: 1px solid white;
       box-shadow: 1px 1px 10px 1px rgba(255, 255, 255, 0.5);
+      filter: hue-rotate(290deg);
+    }
+    &.selected {
+      filter: hue-rotate(45deg);
     }
   }
 }
