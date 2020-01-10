@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { TypedAbstractControl, TypedFormGroup } from 'src/app/types';
+import { TypedAbstractControl, TypedFormGroup } from 'src/app/types/forms';
 
 type FormFieldsNumbers = 'idade';
 
@@ -28,17 +28,11 @@ const formFieldObj: FormFieldObj = {
   templateUrl: './form-tipado.component.html',
   styleUrls: ['./form-tipado.component.scss']
 })
-export class FormTipadoComponent implements OnInit {
+export class FormTipadoComponent {
   form = (this.fb.group(formFieldObj) as unknown) as TypedFormGroup<
     FormFieldObj,
     FormField
   >;
 
   constructor(private fb: FormBuilder) {}
-
-  ngOnInit() {
-    Object.keys((key: string) => {
-      this.form.controls[key].name = key;
-    });
-  }
 }

@@ -1,0 +1,11 @@
+<!-- shorthand form -->
+<div *ngFor="let item of arr; index as i; first as isFirst; last as isLast; even as isEven; odd as isOdd; trackBy: trackByFn">
+  <span>{{ i }}</span>
+</div>
+
+<!-- expanded -->
+<ng-template ngFor let-item [ngForOf]="arr" let-i="index" [ngForTrackBy]="trackByFn">
+  <div>
+    <span>{{ i }}</span>
+  </div>
+</ng-template>

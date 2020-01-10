@@ -42,6 +42,7 @@ export class LifecycleComponent
     console.log(msg);
     this.logs.push(msg);
     // this.cdr.detectChanges(); // necessario para que o angular veja que o estado mudou no AfterViewInit - experimente remover essa linha
+    // O Angular nao detecta mudancas no estado do componente feitas no AfterViewInit
   }
 
   changeState() {
